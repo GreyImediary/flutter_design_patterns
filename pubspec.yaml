@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   font_awesome_flutter: ^8.5.0
-  flutter_markdown: ^0.2.0
+  flutter_markdown: ^0.5.1
 
   cupertino_icons: ^0.1.2
 
@@ -25,6 +25,9 @@ flutter:
     - assets/
     - assets/data/
     - assets/markdown/
+    - assets/images/
+    - assets/images/singleton/
+    - assets/images/singleton/singleton.png
   fonts:
     - family: Roboto
       fonts:

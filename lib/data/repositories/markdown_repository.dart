@@ -5,8 +5,8 @@ import 'package:flutter_design_patterns/constants.dart';
 class MarkdownRepository {
   Future<String> get(String designPatternId) async {
     var path = '$markdownPath$designPatternId.md';
+    print(path);
     var markdownString = await rootBundle.loadString(path);
-
     return markdownString;
   }
 }

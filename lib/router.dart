@@ -7,6 +7,7 @@ import 'package:flutter_design_patterns/screens/category/category.dart';
 import 'package:flutter_design_patterns/screens/design_pattern_details/design_pattern_details.dart';
 import 'package:flutter_design_patterns/screens/main_menu/main_menu.dart';
 import 'package:flutter_design_patterns/widgets/introduction/introduction.dart';
+import 'package:flutter_design_patterns/widgets/singleton/singleton.dart';
 
 class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -31,6 +32,15 @@ class AppRouter {
           ),
         );
 
+      case _DesignPatternRoutes.singletonRoute:
+        final pattern = settings.arguments as DesignPattern;
+        return MaterialPageRoute(
+            builder: (_) => DesignPatternDetails(
+              designPattern: pattern,
+              example: Singleton(),
+            )
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) => MainMenu(),
@@ -41,4 +51,5 @@ class AppRouter {
 
 class _DesignPatternRoutes {
   static const String introductionRoute = '/introduction';
+  static const String singletonRoute = '/singleton';
 }
