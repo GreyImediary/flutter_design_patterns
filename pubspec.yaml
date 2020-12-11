@@ -27,7 +27,7 @@ flutter:
     - assets/markdown/
     - assets/images/
     - assets/images/singleton/
-    - assets/images/singleton/singleton.png
+    - assets/images/factory_method/
   fonts:
     - family: Roboto
       fonts:
