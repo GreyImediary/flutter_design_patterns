@@ -15,6 +15,12 @@
                 "title": "Factory method",
                 "description": "Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.",
                 "route": "/factory-method"
+            },
+            {
+                "id": "abstract-factory",
+                "title": "Abstract factory",
+                "description": "Provide an interface for creating families of related or dependent objects without specifying their concrete classes.",
+                "route": "/abstract-factory"
             }
         ]
     },
