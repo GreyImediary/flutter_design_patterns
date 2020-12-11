@@ -60,7 +60,7 @@ class _SingletonState extends State<Singleton> {
               color: Colors.black87,
               textColor: Colors.white,
             ),
-            const SizedBox(height: paddingXL,),
+            const SizedBox(height: spaceXL,),
             Text(
               'Note: change states\' text and navigate the application '
                 '(e.g. go to the tab "description" or main menu, then go back to this example) '
