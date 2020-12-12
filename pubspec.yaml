@@ -29,6 +29,8 @@ flutter:
     - assets/images/singleton/
     - assets/images/factory_method/
     - assets/images/abstract_factory/
+    - assets/images/builder/
+    - assets/images/prototype/
   fonts:
     - family: Roboto
       fonts:
