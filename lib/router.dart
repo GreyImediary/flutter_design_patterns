@@ -9,6 +9,7 @@ import 'package:flutter_design_patterns/screens/main_menu/main_menu.dart';
 import 'package:flutter_design_patterns/widgets/abstract_factory/abstract_factory.dart';
 import 'package:flutter_design_patterns/widgets/builder/builder.dart';
 import 'package:flutter_design_patterns/widgets/factory_method/factory_method.dart';
+import 'package:flutter_design_patterns/widgets/prototype/prototype.dart';
 import 'package:flutter_design_patterns/widgets/singleton/singleton.dart';
 
 class AppRouter {
@@ -61,6 +62,15 @@ class AppRouter {
           ),
         );
 
+      case _DesignPatternRoutes.prototypeRoute:
+        final pattern = settings.arguments as DesignPattern;
+        return MaterialPageRoute(
+          builder: (_) => DesignPatternDetails(
+            designPattern: pattern,
+            example: Prototype(),
+          ),
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) => MainMenu(),
@@ -74,4 +84,5 @@ class _DesignPatternRoutes {
   static const String factoryMethodRoute = '/factory-method';
   static const String abstractFactoryRoute = '/abstract-factory';
   static const String builderRoute = '/builder';
+  static const String prototypeRoute = '/prototype';
 }
