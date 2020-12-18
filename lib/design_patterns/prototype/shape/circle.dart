@@ -1,4 +1,5 @@
-import 'dart:math';
+import 'package:faker/faker.dart';
+
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -25,9 +26,13 @@ class Circle extends Shape {
   @override
   void randomiseProperties() {
     color = Color.fromRGBO(
-        Random().nextInt(255), Random().nextInt(255), Random().nextInt(255), 1);
+      random.integer(255),
+      random.integer(255),
+      random.integer(255),
+      1,
+    );
 
-    radius = 30 + Random().nextInt(70 - 30).toDouble();
+    radius = random.integer(70, min: 30).toDouble();
   }
 
   @override
@@ -36,14 +41,11 @@ class Circle extends Shape {
     return SizedBox(
       height: 120,
       child: Center(
-        child:  AnimatedContainer(
+        child: AnimatedContainer(
           duration: const Duration(milliseconds: 500),
           height: 2 * radius,
           width: 2 * radius,
-          decoration: BoxDecoration(
-            color: color,
-            shape: BoxShape.circle
-          ),
+          decoration: BoxDecoration(color: color, shape: BoxShape.circle),
           child: Icon(
             Icons.star,
             color: Colors.white,

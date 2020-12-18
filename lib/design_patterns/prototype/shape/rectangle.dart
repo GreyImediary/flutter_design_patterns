@@ -1,5 +1,4 @@
-import 'dart:math';
-
+import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_design_patterns/design_patterns/prototype/shape.dart';
 
@@ -27,10 +26,14 @@ class Rectangle extends Shape {
   @override
   void randomiseProperties() {
     color = Color.fromRGBO(
-        Random().nextInt(255), Random().nextInt(255), Random().nextInt(255), 1);
+      random.integer(255),
+      random.integer(255),
+      random.integer(255),
+      1,
+    );
 
-    height =  50 + Random().nextInt(100 - 50).toDouble();
-    width = 50 + Random().nextInt(100 - 50).toDouble();
+    height =  random.integer(100, min: 50).toDouble();
+    width =  random.integer(100, min: 50).toDouble();
   }
 
   @override
