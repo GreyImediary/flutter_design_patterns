@@ -14,6 +14,8 @@ dependencies:
 
   cupertino_icons: ^0.1.2
 
+  xml: ^4.5.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -31,6 +33,7 @@ flutter:
     - assets/images/abstract_factory/
     - assets/images/builder/
     - assets/images/prototype/
+    - assets/images/adapter/
   fonts:
     - family: Roboto
       fonts:
