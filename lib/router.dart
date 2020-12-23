@@ -10,6 +10,7 @@ import 'package:flutter_design_patterns/widgets/abstract_factory/abstract_factor
 import 'package:flutter_design_patterns/widgets/adapter/adapter.dart';
 import 'package:flutter_design_patterns/widgets/bridge/bridge.dart';
 import 'package:flutter_design_patterns/widgets/builder/builder.dart';
+import 'package:flutter_design_patterns/widgets/composite/composite.dart';
 import 'package:flutter_design_patterns/widgets/factory_method/factory_method.dart';
 import 'package:flutter_design_patterns/widgets/prototype/prototype.dart';
 import 'package:flutter_design_patterns/widgets/singleton/singleton.dart';
@@ -91,6 +92,15 @@ class AppRouter {
           ),
         );
 
+      case _DesignPatternRoutes.compositeRoute:
+        final pattern = settings.arguments as DesignPattern;
+        return MaterialPageRoute(
+          builder: (_) => DesignPatternDetails(
+            designPattern: pattern,
+            example: Composite(),
+          ),
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) => MainMenu(),
@@ -108,4 +118,5 @@ class _DesignPatternRoutes {
 
   static const String adapterRoute = '/adapter';
   static const String bridgeRoute = '/bridge';
+  static const String compositeRoute = '/composite';
 }

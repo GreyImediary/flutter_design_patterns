@@ -36,6 +36,7 @@ flutter:
     - assets/images/prototype/
     - assets/images/adapter/
     - assets/images/bridge/
+    - assets/images/composite/
   fonts:
     - family: Roboto
       fonts:
