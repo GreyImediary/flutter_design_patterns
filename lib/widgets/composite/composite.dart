@@ -17,9 +17,9 @@ class Composite extends StatelessWidget {
 
     var moviesDirectory = Directory('Movies');
     moviesDirectory.addFile(
-        VideoFile('Eternal Sunshine of the Spotless Mind', 68745778328743));
+        VideoFile('Eternal Sunshine of the Spotless Mind', 68328743));
     moviesDirectory.addFile(
-        VideoFile('Lord of the rings: Return of the king', 1923435423428743));
+        VideoFile('Lord of the rings: Return of the king', 192428743));
 
     var catPicturesDirectory = Directory('Cats');
     catPicturesDirectory.addFile(ImageFile('Cat 1.jpg', 844497));

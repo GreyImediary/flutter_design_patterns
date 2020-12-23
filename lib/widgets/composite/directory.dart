@@ -14,7 +14,7 @@ class Directory extends StatelessWidget implements IFile {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return render(context);
   }
 
   @override
