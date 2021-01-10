@@ -14,6 +14,7 @@ import 'package:flutter_design_patterns/widgets/composite/composite.dart';
 import 'package:flutter_design_patterns/widgets/decorator/decorator_example.dart';
 import 'package:flutter_design_patterns/widgets/facade/facade.dart';
 import 'package:flutter_design_patterns/widgets/factory_method/factory_method.dart';
+import 'package:flutter_design_patterns/widgets/flyweight/flyweight.dart';
 import 'package:flutter_design_patterns/widgets/prototype/prototype.dart';
 import 'package:flutter_design_patterns/widgets/singleton/singleton.dart';
 
@@ -121,6 +122,15 @@ class AppRouter {
           ),
         );
 
+      case _DesignPatternRoutes.flyweightRoute:
+        final pattern = settings.arguments as DesignPattern;
+        return MaterialPageRoute(
+          builder: (_) => DesignPatternDetails(
+            designPattern: pattern,
+            example: Flyweight(),
+          ),
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) => MainMenu(),
@@ -141,4 +151,5 @@ class _DesignPatternRoutes {
   static const String compositeRoute = '/composite';
   static const String facadeRoute = '/facade';
   static const String decoratorRoute = '/decorator';
+  static const String flyweightRoute = '/flyweight';
 }

@@ -70,6 +70,12 @@
                 "title": "Decorator",
                 "description": "Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.",
                 "route": "/decorator"
+            },
+            {
+                "id": "flyweight",
+                "title": "Flyweight",
+                "description": "Use sharing to support large numbers of fine-grained objects efficiently.",
+                "route": "/flyweight"
             }
         ]
     },

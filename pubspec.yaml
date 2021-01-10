@@ -39,6 +39,7 @@ flutter:
     - assets/images/composite/
     - assets/images/facade/
     - assets/images/decorator/
+    - assets/images/flyweight/
   fonts:
     - family: Roboto
       fonts:
