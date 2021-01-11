@@ -16,6 +16,7 @@ import 'package:flutter_design_patterns/widgets/facade/facade.dart';
 import 'package:flutter_design_patterns/widgets/factory_method/factory_method.dart';
 import 'package:flutter_design_patterns/widgets/flyweight/flyweight.dart';
 import 'package:flutter_design_patterns/widgets/prototype/prototype.dart';
+import 'package:flutter_design_patterns/widgets/proxy/proxy.dart';
 import 'package:flutter_design_patterns/widgets/singleton/singleton.dart';
 
 class AppRouter {
@@ -131,6 +132,16 @@ class AppRouter {
           ),
         );
 
+
+      case _DesignPatternRoutes.proxyRoute:
+        final pattern = settings.arguments as DesignPattern;
+        return MaterialPageRoute(
+          builder: (_) => DesignPatternDetails(
+            designPattern: pattern,
+            example: Proxy(),
+          ),
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) => MainMenu(),
@@ -152,4 +163,5 @@ class _DesignPatternRoutes {
   static const String facadeRoute = '/facade';
   static const String decoratorRoute = '/decorator';
   static const String flyweightRoute = '/flyweight';
+  static const String proxyRoute = '/proxy';
 }
