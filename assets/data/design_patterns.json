@@ -13,7 +13,7 @@
             {
                 "id": "factory-method",
                 "title": "Factory method",
-                "description": "Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.",
+                "description": "Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.",
                 "route": "/factory-method"
             },
             {
